@@ -1,0 +1,50 @@
+[
+    {
+        "serie": "The Office",
+
+        "itens": [
+            {
+                "id": 5,
+                "titulo": "The Office",
+                "backgroundImg": "scene5.jpeg",
+                "imgThumb": "scene5.jpeg",
+                "episodio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed sagittis lorem, sed posuere felis."
+                
+            },
+            {
+                "id": 4,
+                "titulo": "The Office",
+                "backgroundImg": "scene4.jpg",
+                "imgThumb": "scene4.jpg",
+                "episodio":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed sagittis lorem, sed posuere felis."
+                
+            },
+            {
+                "id": 3,
+                "titulo": "The Office",
+                "backgroundImg": "scene3.jpg",
+                "imgThumb": "scene3.jpg",
+                "episodio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed sagittis lorem, sed posuere felis."
+                
+            },
+            {
+                "id": 2,
+                "titulo": "The Office",
+                "backgroundImg": "scene2.jpg",
+                "imgThumb": "scene2.jpg",
+                "episodio":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed sagittis lorem, sed posuere felis." 
+                
+            },
+            {
+                "id": 1,
+                "titulo": "The Office",
+                "backgroundImg": "scene1.jpg",
+                "imgThumb": "scene1.jpg",
+                "episodio":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed sagittis lorem, sed posuere felis."
+                
+            }
+        ]
+}]
+    
+    
+    
