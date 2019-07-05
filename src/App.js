@@ -2,8 +2,8 @@ import React, {Component } from 'react';
 
 import Sidenav from './components/sidenav/sidenav';
 import Rail from './components/rail/rail';
-
 import { StyledView } from './App.styled'
+import { keycodes } from './utils/constants';
 
 export default class App extends Component {
   constructor(props) {
@@ -29,21 +29,17 @@ export default class App extends Component {
   }
 
   runner(keyCode) {
-    let keyUp = 38;
-    let keyDown = 40;
-    let keyLeft = 37;
-    let keyRight = 39;
     let forms = document.forms;
     let nameForm = forms[this.formPosition].getAttribute('name');
 
-    if(keyCode === keyRight || keyCode === keyLeft) {
-      let pos = ((keyCode === keyRight) ? (this.formChildPosition+1) : (this.formChildPosition-1));
+    if(keyCode === keycodes.right || keyCode === keycodes.left) {
+      let pos = ((keyCode === keycodes.right) ? (this.formChildPosition+1) : (this.formChildPosition-1));
       if(forms[this.formPosition].elements[pos]) {
         this.formChildPosition=pos;
-      }else if(keyCode === keyLeft && nameForm !== "sidenav-menu") {
+      }else if(keyCode === keycodes.left && nameForm !== "sidenav-menu") {
         this.formPosition=1;
         this.formChildPosition=0;
-      }else if(keyCode === keyRight) {
+      }else if(keyCode === keycodes.right) {
         if(nameForm === "sidenav-menu") {
           this.formPosition=(
             (forms['highlight'].getAttribute('class') === 'hidden') 
@@ -54,16 +50,16 @@ export default class App extends Component {
           this.formChildPosition=0;
         }
       }
-    }else if(keyCode === keyDown || keyCode === keyUp) {
-      let pos = ((keyCode === keyDown) ? (this.formPosition+1) : (this.formPosition-1));
+    }else if(keyCode === keycodes.down || keyCode === keycodes.up) {
+      let pos = ((keyCode === keycodes.down) ? (this.formPosition+1) : (this.formPosition-1));
       // eslint-disable-next-line
       if(forms[pos] && nameForm !== "destaque"
       // eslint-disable-next-line
-      || nameForm === "destaque" && keyCode !== keyUp) {
+      || nameForm === "destaque" && keyCode !== keycodes.up) {
         let el = forms[this.formPosition].parentElement.nextSibling;
 
         if(nameForm === "sidenav-menu"
-        && keyCode === keyDown
+        && keyCode === keycodes.down
         && !el) {
           this.formChildPosition=0;
         }else{
